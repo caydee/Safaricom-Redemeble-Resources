@@ -1,0 +1,59 @@
+html, body {
+    width: 100%;
+    height:100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.objectfit {
+    object-fit: cover;
+}
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        $i: 6;
+
+        @while $i <= 32 {
+            .font#{$infix}-#{$i} {
+                font-size: 0rem + $i / 16;
+            }
+
+            $i: $i + 1;
+        }
+
+        $i: 100;
+
+        @while $i < 1000 {
+            .fw#{$infix}-#{$i} {
+                font-weight: $i;
+            }
+
+            $i: $i + 100;
+        }
+    }
+}
+
+.border-bottom-last-0:not(:last-child){
+    border-bottom: $border-width solid $border-color !important;
+}
+
+th{
+    white-space: nowrap;
+}
+.main{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+pre {
+    .snippet{
+        white-space: normal !important;
+        word-wrap: break-word  !important;
+        overflow: auto !important;
+        text-align:left !important;
+    }
+
+}

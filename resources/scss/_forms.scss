@@ -1,0 +1,9 @@
+.form-control-no-border {
+  border: 0;
+  box-shadow: none;
+
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+}

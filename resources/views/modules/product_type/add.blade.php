@@ -1,0 +1,35 @@
+@extends('includes.body')
+@section('content')
+<div class="col-12">
+    <div class="card">
+        <div class="card-header">
+            <h1>Add Product Type</h1>
+        </div>
+        <div class="card-body">
+            <form action="{{ route('product_type.store') }}" method="post" class="form form-horizontal create-form">
+                @csrf
+                <div class="form-group">
+                    <label for="product_type" class="control-label">Name</label>
+                    <input type="text" name="product_type" id="product_type" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="product_description" class="control-label">Description</label>
+                    <textarea name="product_description" id="product_description" class="form-control editor"></textarea>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="active" name="active" checked value="1">
+                    <label class="form-check-label" for="active">Active</label>
+                </div>
+                <div class="form-group form-row">
+                    <button class="btn ml-auto btn-primary" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endsection
+@section('header')
+
+@endsection
+@section('footer')
+@endsection
