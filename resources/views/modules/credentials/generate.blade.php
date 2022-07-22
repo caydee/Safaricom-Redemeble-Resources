@@ -6,7 +6,7 @@
                 <h1>API Credentials</h1>
             </div>
             <div class="card-body">
-                <form action="{{ url('backend/security/generate') }}" method="post" class="form form-horizontal create-form">
+                <form action="{{ route('credentials.generate') }}" method="post" class="form form-horizontal create-form">
                     @csrf
                     <div class="form-group form-row">
                         <div class="col-12 col-md-4">

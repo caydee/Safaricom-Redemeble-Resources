@@ -77,8 +77,8 @@ Route::group([ 'role'=>['admin','audit'],'middleware'=>['auth','domain','org'],'
 
     Route::resource('user.role', RolesController::class);
     Route::post('user/{user}/role/get', [RolesController::class, 'get'])->name('user.role.datatable');
-    Route::get('user/{user}role/export', [RolesController::class, 'export_view'])->name('user.role.export_view');
-    Route::post('user/{user}role/export', [RolesController::class, 'export'])->name('user.role.export');
+    Route::get('user/{user}/role/export', [RolesController::class, 'export_view'])->name('user.role.export_view');
+    Route::post('user/{user}/role/export', [RolesController::class, 'export'])->name('user.role.export');
 
 
     Route::resource('user.permission', PermissionsController::class);
@@ -115,7 +115,7 @@ Route::group([ 'role'=>['admin','audit'],'middleware'=>['auth','domain','org'],'
 
     Route::prefix('security')->group(function(){
         Route::get('/credentials',[CredentialsController::class,'index'])->name('credentials');
-        Route::post('/generate',[CredentialsController::class,'generateCredentials'])->name('generate credentials');
+        Route::post('/generate',[CredentialsController::class,'generateCredentials'])->name('credentials.generate');
     });
 
     Route::prefix('vouchers')->group(function(){

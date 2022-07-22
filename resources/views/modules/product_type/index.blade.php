@@ -5,7 +5,7 @@
         <div class="card-header d-flex justify-content-between align-items-center">
             <h1>Product Type</h1>
             <div class="action-btn">
-                <a href="{{ url('backend/product-type/create') }}" class="btn btn-sm btn-outline-dark">
+                <a href="{{ route('product_type.create') }}" class="btn btn-sm btn-outline-dark">
                     <i class="fas fa-plus"></i>
                     Add Product Type
                 </a>

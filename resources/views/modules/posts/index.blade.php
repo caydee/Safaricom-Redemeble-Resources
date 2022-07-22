@@ -4,7 +4,7 @@
         <div class="card-header d-flex justify-content-between align-items-center">
             <h3>Notifications</h3>
             <div class="actionbtn">
-                <a href="{{ url('backend/notification/create') }}" class="btn btn-sm btn-outline-dark"><i class="fas fa-plus mr-1"></i>Add Notification</a>
+                <a href="{{ route('notification.create') }}" class="btn btn-sm btn-outline-dark"><i class="fas fa-plus mr-1"></i>Add Notification</a>
             </div>
         </div>
         <div class="card-body">

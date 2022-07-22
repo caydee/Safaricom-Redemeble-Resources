@@ -9,7 +9,7 @@
             </button>
         </div>
         <div class="card-body">
-            <form action="{{ url('management/users/roles/assign') }}" class="form form-horizontal create-form" method="post">
+            <form action="{{ route('users.roles.assign',$user->id) }}" class="form form-horizontal create-form" method="post">
                 @csrf
                 <input type="hidden" name="userid" id="add-user-id">
                 <div class="form-group">

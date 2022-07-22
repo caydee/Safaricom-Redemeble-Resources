@@ -6,7 +6,7 @@
             <h3>Add Notification</h3>
         </div>
         <div class="card-body">
-            <form action="{{ url('backend/notification') }}" class="create-form form form-horizontal" method="POST">
+            <form action="{{ route('notification.store') }}" class="create-form form form-horizontal" method="POST">
                 @csrf
                 <div class="form-group form-row">
                     <div class="col-12 col-md-8">

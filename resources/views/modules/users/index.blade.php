@@ -5,10 +5,10 @@
         <div class="card-header d-flex justify-content-between align-items-center">
             <h1>Users</h1>
             <div class="actionbtn">
-                <a href="{{ url('backend/user/create') }}" class="btn btn-outline-dark btn-sm">
+                <a href="{{ route('user.create') }}" class="btn btn-outline-dark btn-sm">
                     <i class="fas fa-plus"></i> Add User
                 </a>
-                <a href="{{ url('backend/user/export') }}" class="btn btn-outline-dark btn-sm">
+                <a href="{{ route('user.export') }}" class="btn btn-outline-dark btn-sm">
                     <i class="fas fa-file-export"></i> Export
                 </a>
             </div>
@@ -53,7 +53,7 @@
             "processing": true,
             "serverSide": true,
             "ajax":{
-                "url": "{{ url('backend/user/get') }}",
+                "url": "{{ route('user.get') }}",
                 "dataType": "json",
                 "type": "POST",
                 "data":{ _token: "{{csrf_token()}}"}
